@@ -1,0 +1,97 @@
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script>
+    google.charts.load('current', { 'packages': ['map'] });
+    google.charts.setOnLoadCallback(drawMap);
+
+    function drawMap() {
+      var data1 = google.visualization.arrayToDataTable([
+        ['Country', 'Celsius'],
+                 ['	US	','	-5.04	'],
+['	Canada	','	 -7.97	'],
+['	GreenLand ',' -24.30 '],
+['	France	','	-5.55	'],
+['	Russia	','	-10.10	'],
+['	China	','	-1.31	'],
+['	India	','	6.84	'],
+['	Australia	','	9.58	'],
+['	Algeria	','	14.29	'],
+['	Africa	','	10.25	'],
+['	Bresil	','	6.44	'],
+['	Atlantic	','	0.35	'],
+['	Pacific	','	-5.95	']
+
+      ]);
+	  var data2 = google.visualization.arrayToDataTable([
+        ['Country', 'Celsius'],
+                 ['	US	','	-5.39	'],
+['	Canada	','	-8.41	'],
+['	GreenLand	','	-24.91	'],
+['	France	','	-6.23	'],
+['	Russia	','	-10.45	'],
+['	China	','	-1.48	'],
+['	India	','	7.22	'],
+['	Australia	','	9.44	'],
+['	Algeria	','	14.37	'],
+['	Africa	','	10.86	'],
+['	Bresil	','	6.02	'],
+['	Atlantic	','	0.11	'],
+['	Pacific	','	-6.52	']
+
+
+
+      ]);
+	   var data3 = google.visualization.arrayToDataTable([
+        ['Country', 'Celsius'],
+                 ['	US	','	-5.13	'],
+['	Canada	','	-8.16E'],
+['	GreenLand	','	-24.88	'],
+['	France	','	-6.13	'],
+['	 Russia	','	-9.84	'],
+['	 China	','	-1.44	'],
+['	 India	','	7.04'],
+['	 Australia	','	9.23	'],
+['	Algeria	','	14.06	'],
+['	Africa	','	11.01'],
+['	Bresil	','	6.21'],
+['	Atlantic	','	0.28	'],
+['	Pacific	','	-6.17	']
+
+      ]);
+     
+
+    var options = { showTip: true };
+
+    var map1 = new google.visualization.Map(document.getElementById('chart_div1'));
+	var map2 = new google.visualization.Map(document.getElementById('chart_div2'));
+	var map3 = new google.visualization.Map(document.getElementById('chart_div3'));
+	
+    map1.draw(data1, options);
+	map2.draw(data2, options);
+	map3.draw(data3, options);
+  };
+  </script>
+  </head>
+<body bgcolor="#528ac9">
+ <H1 align = "center" style = "color:#deb887;">
+ <i> What would happen to the global temperature if we cut all of the  trees of the world? <br/> If all of the trees were still alive? 
+</i> <br/> </h1> <br/> <br/> <br/>
+<p align = "center" style ="color:#800000; font-size:150%"> Hypothesis : <br/> <br/> 
+We think that the less trees are on earth the hotter it would be since trees feed on carbon dioxide and vice-versa. 
+<br/> <br/>
+<table align = "center" border="0" cellpadding="10" width ="400">
+<tr>
+<td  align = "center" style ="font-size:140%"> No change Simulation Run</td>
+<td  align = "center" style ="font-size:140%"> <a href="file:///C:/Users/summercamp/Desktop/project/Info%20Site%20No%20trees.html"> No trees Simulation Run </a> </td>
+<td  align = "center" style ="font-size:140%"> <a href="file:///C:/Users/summercamp/Desktop/project/Info%20Site%20All%20trees.html"> All trees Simulation Run </a> </td>
+</tr>
+<tr>
+<td height ="200"> <div id="chart_div1" style="width:550px; height: 400px;"> </div> </td> 
+<td height ="200"> <div id="chart_div2" style="width:550px; height: 400px;"> </div> </td>
+<td height ="200">   <div id="chart_div3" style="width:550px; height: 400px;"> </div> </td>
+</tr>
+</table>
+</body>
+</html>
